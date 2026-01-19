@@ -18,7 +18,6 @@ This project implements an advanced machine learning system to predict coastal f
 - **Proper Temporal Validation**: Train/validation/test splits by year to prevent data leakage
 - **Class Imbalance Handling**: Balanced class weights for rare flood events
 - **Model Explainability**: Gradient-based feature importance analysis
-- **Production-Ready**: Complete pipeline from raw data to deployment-ready models
 
 ## Performance Metrics
 
