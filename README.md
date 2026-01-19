@@ -55,14 +55,6 @@ This project implements an advanced machine learning system to predict coastal f
 - Testing: 2016-2020 (21,924 daily samples)
 - Source: NEUSTG (Northeastern US Tide Gauge) dataset
 
-## Installation
-
-### Prerequisites
-
-- Python 3.8+
-- conda (recommended for environment management)
-- CUDA-capable GPU (optional, but recommended for faster training)
-
 
 ## Project Structure
 
