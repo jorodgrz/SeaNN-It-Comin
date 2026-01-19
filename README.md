@@ -64,58 +64,6 @@ This project implements an advanced machine learning system to predict coastal f
 - conda (recommended for environment management)
 - CUDA-capable GPU (optional, but recommended for faster training)
 
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/jorodgrz/SeaNN-It-Comin-.git
-cd SeaNN-It-Comin-
-
-# Install dependencies
-conda create -n coastal-flood python=3.9
-conda activate coastal-flood
-pip install -r requirements.txt
-```
-
-## Usage
-
-### Running the Complete Pipeline
-
-Open and run the Jupyter notebook:
-
-```bash
-jupyter notebook improved_model_comprehensive.ipynb
-```
-
-The notebook includes:
-1. Data loading and preprocessing
-2. Advanced feature engineering
-3. Model training with early stopping
-4. Comprehensive evaluation
-5. Visualization generation
-
-### Using Pre-trained Models
-
-```python
-import tensorflow as tf
-import pickle
-import numpy as np
-
-# Load the trained model
-model = tf.keras.models.load_model('Models/best_gru_model.keras')
-
-# Load the feature scaler
-with open('Models/scaler.pkl', 'rb') as f:
-    scaler = pickle.load(f)
-
-# Prepare your data (7 days of historical features)
-# X_new should have shape: (n_samples, 7, 74)
-X_new_scaled = scaler.transform(X_new.reshape(-1, 518)).reshape(-1, 7, 74)
-
-# Generate predictions (14-day forecast)
-predictions = model.predict(X_new_scaled)
-# predictions shape: (n_samples, 14) - probability of flood for each of next 14 days
-```
 
 ## Project Structure
 
@@ -182,15 +130,6 @@ All visualizations and detailed results are available in the `Outputs/` director
 - **Per-Day Metrics**: Performance degradation over 14-day forecast horizon
 - **Per-Station Performance**: F1 scores vary by geographic location
 - **Feature Importance**: Identifies most predictive features (e.g., days since last flood, sea level statistics)
-
-## Future Enhancements
-
-- Integration with real-time NOAA tide gauge data
-- Web API for operational flood forecasting
-- Ensemble methods combining multiple architectures
-- Incorporation of weather forecast data (wind, pressure)
-- Extended forecast horizons (30+ days)
-- Mobile app for at-risk communities
 
 ## Contributing
 
