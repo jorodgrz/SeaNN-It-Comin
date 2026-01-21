@@ -8,7 +8,7 @@ This project implements an advanced machine learning system to predict coastal f
 
 ## Features
 
-- **Advanced Deep Learning**: Bidirectional GRU architecture for sequence-to-sequence flood prediction
+- **Deep Learning**: Bidirectional GRU architecture for sequence-to-sequence flood prediction
 - **Comprehensive Feature Engineering**: 74+ features including:
   - Tidal harmonic constituents (M2, S2, K1, O1, spring-neap cycles)
   - Rolling window statistics (3, 7, 14, 30 days)
